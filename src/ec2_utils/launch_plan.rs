@@ -243,6 +243,7 @@ async fn get_instance_profile(iam_client: &aws_sdk_iam::Client) -> OrchResult<St
     Ok(instance_profile_arn)
 }
 
+// TODO: the AMI prefix might need to be kept in state.rs
 async fn get_latest_ami(ssm_client: &aws_sdk_ssm::Client) -> OrchResult<String> {
     let ami_id = ssm_client
         .get_parameter()

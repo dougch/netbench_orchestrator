@@ -8,8 +8,8 @@ pub const STATE: State = State {
     version: "v2.1.3",
 
     // TODO remove `vpc_region` and configure vpc/subnet in same `region`
-    region: "us-west-1",
-    vpc_region: "us-east-1",
+    region: "us-west-2",
+    vpc_region: "us-west-2",
     instance_type: "c5.4xlarge",
     // TODO get from scenario --------------
 
@@ -31,20 +31,20 @@ pub const STATE: State = State {
     poll_delay_russula: Duration::from_secs(5),
 
     // aws
-    s3_private_log_bucket: "netbenchrunnerlogs-source",
-    s3_log_bucket: "netbenchrunnerlogs",
-    s3_resource_folder: "TS",
-    cloudfront_url: "http://d2jusruq1ilhjs.cloudfront.net",
+    s3_private_log_bucket: "netbenchrunner-private-source-dougch",
+    s3_log_bucket: "netbenchrunnerlogs-public-dougch",
+    s3_resource_folder: "resources",
+    cloudfront_url: "https://d1gw3jcljadnby.cloudfront.net",
     cloud_watch_group: "netbench_runner_logs",
     // Used to give permissions to the ec2 instance. Part of the IAM Role `NetbenchRunnerRole`
-    instance_profile: "NetbenchRunnerInstanceProfile",
+    instance_profile: "NetbenchInfraDev-dougch-instanceProfile9C1E1CDD-9kyBJZ9Bo0Vd",
     // Used to find subnets with the following tag/value pair
     subnet_tag_value: (
         "tag:aws-cdk:subnet-name",
-        "public-subnet-for-runners-in-us-east-1",
+        "NetbenchRunnerSubnet",
     ),
     // create/import a key pair to the account
-    ssh_key_name: "apoorvko_m1",
+    ssh_key_name: "20190816-Isengard_lappy",
 };
 
 pub struct State {

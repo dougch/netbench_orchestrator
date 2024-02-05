@@ -39,7 +39,7 @@ pub fn dc_quic_server_driver(unique_id: &str, scenario: &Scenario) -> NetbenchDr
             ),
         ],
         proj_name: proj_name.clone(),
-        local_path_to_proj: Some("/Users/apoorvko/projects/ws_SaltyLib/src".into()),
+        local_path_to_proj: Some("/home/dougch/gitrepos".into()),
     };
 
     // TODO move this one layer up so its common
@@ -86,7 +86,7 @@ pub fn dc_quic_client_driver(unique_id: &str, scenario: &Scenario) -> NetbenchDr
             ),
         ],
         proj_name: proj_name.clone(),
-        local_path_to_proj: Some("/Users/apoorvko/projects/ws_SaltyLib/src".into()),
+        local_path_to_proj: Some("/home/dougch/gitrepos".into()),
     };
 
     if let Some(local_path_to_proj) = &driver.local_path_to_proj {
